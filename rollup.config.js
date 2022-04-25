@@ -32,16 +32,16 @@ const PLUGINS = [
 
 export default [{
 	external: EXTERNALS,
-	input: "src/pluto-hook.ts",
+	input: "src/pluto-hooks.ts",
 	output: { file: "dist/index.js", format: "cjs", globals: GLOBALS },
 	plugins: [...PLUGINS, CleandirPlugin("dist")]
 }, {
 	external: EXTERNALS,
-	input: "src/pluto-hook.ts",
+	input: "src/pluto-hooks.ts",
 	output: { file: "dist/index.esm.js", format: "esm", globals: GLOBALS },
 	plugins: PLUGINS
 }, {
-	input: "src/pluto-hook.ts",
+	input: "src/pluto-hooks.ts",
 	output: { file: "dist/index.d.ts", format: "esm" },
 	plugins: [PLUGINS[0], DtsPlugin()]
 }];

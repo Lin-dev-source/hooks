@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import useCountUpdateEffect from "../index";
+import useRangeUpdateEffect from "../index";
 
 export default () => {
 	const [count, setCount] = useState(0);
@@ -10,9 +10,9 @@ export default () => {
 		setEffectCount((c) => c + 1);
 	}, [count]);
 
-	useCountUpdateEffect(() => {
+	useRangeUpdateEffect(() => {
 		setUpdateEffectCount((c) => c + 1);
-	},  [count],10);
+	},  [count],[5,20]);
 
 	return (
 		<div>
