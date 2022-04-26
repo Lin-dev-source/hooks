@@ -1,8 +1,11 @@
 import React,{useRef,useMemo} from "react";
 import throttle from "lodash/throttle";
 import useUnmount from "../useUnmount"
+import {ThrottleOptions} from "../../types"
 
-export default function useThrottleFn(fn, options) {
+type noop = (...args: any) => any; // 默认
+
+export default function useThrottleFn<T extends noop>(fn:T, options:ThrottleOptions) {
   // 保证 debounce 中每次取到的 fn 都是最新的
   const fnRef = useRef(fn);
   fnRef.current = fn;

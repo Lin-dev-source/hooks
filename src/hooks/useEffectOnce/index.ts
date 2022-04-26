@@ -1,9 +1,8 @@
 import React,{useEffect} from 'react';
+import type { EffectCallback } from 'react';
 
-// type effectHookType = typeof useEffect
-
-function useEffectOnece(effect){
+function useEffectOnce(effect:EffectCallback){
   useEffect(effect,[])
 }
 
-export default useEffectOnece;
+export default useEffectOnce;

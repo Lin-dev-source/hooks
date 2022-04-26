@@ -12,6 +12,7 @@ import Debounce from "./hooks/useDebounceEffect/demo/demo"
 import Throttle from "./hooks/useThrottleEffect/demo/demo1"
 import CountUpdate from "./hooks/useCountUpdateEffect/demo/demo1"
 import RangeUpdate from "./hooks/useRangeUpdateEffect/demo/demo1"
+import First from "./hooks/useFirstMountState/demo/demo1"
 
 
 function App(): JSX.Element {
@@ -28,6 +29,7 @@ function App(): JSX.Element {
 					<Link to="/Throttle">Throttle</Link>
 					<Link to="/CountUpdate">CountUpdate</Link>
 					<Link to="/RangeUpdate">RangeUpdate</Link>
+					<Link to="/First">First</Link>
 				</div>
 				<Routes>
 					<Route path="/once" element={<UseEffectOnce />} />
@@ -38,6 +40,7 @@ function App(): JSX.Element {
 					<Route path="/Throttle" element={<Throttle />} />
 					<Route path="/CountUpdate" element={<CountUpdate />} />
 					<Route path="/RangeUpdate" element={<RangeUpdate />} />
+					<Route path="/First" element={<First />} />
 				</Routes>
 			</Router>
 		</div>

@@ -1,8 +1,11 @@
 import React,{useRef,useMemo} from "react";
 import debounce from "lodash/debounce";
 import useUnmount from "../useUnmount"
+import {DebounceOptions} from "../../types"
 
-export default function useDebounceFn(fn, options) {
+type noop = (...args: any) => any;
+
+export default function useDebounceFn<T extends noop>(fn:T, options:DebounceOptions) {
   // 保证 debounce 中每次取到的 fn 都是最新的
   const fnRef = useRef(fn);
   fnRef.current = fn;

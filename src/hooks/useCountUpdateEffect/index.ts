@@ -1,12 +1,11 @@
 import React,{useEffect,useRef} from 'react';
+import type { DependencyList, EffectCallback } from 'react';
 
-// 第n次渲染才执行
-export default function useCountUpdateEffect(effect,deps,n){
-  const count = useRef(0)
+// 第n次渲染并且deps变化才执行
+export default function useCountUpdateEffect(effect:EffectCallback,n:number,deps?:DependencyList):void{
+  const count = useRef<number>(0)
 
-  if(count.current < n){
-    count.current=count.current+1;
-  }
+  count.current=count.current+1;
   useEffect(() => {
     console.log('useEffect',count.current);
     if(count.current == n){

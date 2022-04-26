@@ -2,8 +2,10 @@ import React,{useEffect,useState} from "react";
 import useDebounceFn from "../useDebounceFn";
 import useUnmount from "../useUnmount";
 import useUpdateEffect from "../useUpdateEffect";
+import type { DependencyList, EffectCallback } from 'react';
+import {DebounceOptions} from "../../types"
 
-export default function useDebounceEffect(effect,deps,debounceOptions){
+export default function useDebounceEffect(effect:EffectCallback,deps?:DependencyList,debounceOptions?:DebounceOptions){
   const [flag, setFlag] = useState({}); // 记录延迟是否结束
 
   const { run, cancel } = useDebounceFn(() => {

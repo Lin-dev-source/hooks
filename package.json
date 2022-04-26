@@ -1,11 +1,14 @@
 {
   "name": "pluto-hooks",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "一个好用的react hook工具库",
   "keywords": [
     "react",
     "hook",
-    "typescript"
+    "typescript",
+    "useEffect",
+    "前端",
+    "工具"
   ],
   "author": "",
   "license": "MIT",

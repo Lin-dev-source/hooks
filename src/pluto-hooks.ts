@@ -3,10 +3,11 @@ import useCompareEffect from "./hooks/useCompareEffect"
 import useDeepCompareEffect from "./hooks/useDeepCompareEffect"
 import useDebounceEffect from "./hooks/useDebounceEffect"
 import useDebounceFn from "./hooks/useDebounceFn"
-import useEffectOnece from "./hooks/useEffectOnce"
+import useEffectOnce from "./hooks/useEffectOnce"
 import useThrottleFn from "./hooks/useThrottleFn"
 import useThrottleEffect from "./hooks/useThrottleEffect"
 import useUpdateEffect from "./hooks/useUpdateEffect"
+import useFirstMountState from "./hooks/useFirstMountState"
 
 export {
   useAsyncEffect,
@@ -14,8 +15,9 @@ export {
   useDeepCompareEffect,
   useDebounceEffect,
   useDebounceFn,
-  useEffectOnece,
+  useEffectOnce,
   useThrottleFn,
   useThrottleEffect,
   useUpdateEffect,
+  useFirstMountState,
 }

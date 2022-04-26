@@ -2,8 +2,10 @@ import React,{useEffect,useState} from "react";
 import useThrottleFn from "../useThrottleFn";
 import useUnmount from "../useUnmount";
 import useUpdateEffect from "../useUpdateEffect";
+import type { DependencyList, EffectCallback } from 'react';
+import {ThrottleOptions} from "../../types"
 
-export default function useDebounceEffect(effect,deps,options){
+export default function useThrottleEffect(effect:EffectCallback,deps:DependencyList,options:ThrottleOptions){
   const [flag, setFlag] = useState({}); // 记录延迟是否结束
 
   const { run, cancel } = useThrottleFn(() => {

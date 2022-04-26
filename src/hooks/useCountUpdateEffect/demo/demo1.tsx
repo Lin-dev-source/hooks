@@ -11,8 +11,9 @@ export default () => {
 	}, [count]);
 
 	useCountUpdateEffect(() => {
-		setUpdateEffectCount((c) => c + 1);
-	},  [count],10);
+		// setUpdateEffectCount((c) => c + 1);
+		console.log('useCountUpdateEffect执行');
+	},10);
 
 	return (
 		<div>
