@@ -1,6 +1,16 @@
-# pluto-hooks
+# pluto-hooks <img src="https://img.shields.io/badge/pluto-hooks/hooks工具库-66f.svg">
 
 **一个好用的react hook工具库**
+
+
+[![author](https://img.shields.io/badge/author-pluto-lam-f66.svg)](https://github.com/Lin-dev-source/hooks)
+[![version](https://img.shields.io/badge/version-0.0.2-f66.svg)](https://github.com/Lin-dev-source/hooks)
+[![web](https://img.shields.io/badge/web-%3E%3D%2095%25-3c9.svg)](https://github.com/Lin-dev-source/hooks)
+[![node](https://img.shields.io/badge/node-%3E%3D%208.0.0-3c9.svg)](https://github.com/Lin-dev-source/hooks)
+[![test](https://img.shields.io/badge/test-passing-f90.svg)](https://github.com/Lin-dev-source/hooks)
+[![build](https://img.shields.io/badge/build-passing-f90.svg)](https://github.com/Lin-dev-source/hooks)
+[![coverage](https://img.shields.io/badge/coverage-90%25-09f.svg)](https://github.com/Lin-dev-source/hooks)
+[![license](https://img.shields.io/badge/license-MIT-09f.svg)](https://github.com/Lin-dev-source/hooks)
 
 
 
