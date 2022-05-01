@@ -56,6 +56,7 @@ useEffectOnece(() => {
 
 
 ### hooks介绍
+**type为参数类型**
 
 #### useCountUpdateEffect
 
@@ -63,7 +64,7 @@ useEffectOnece(() => {
 
 ```ts
 type {
-	effect:EffectCallback,
+    effect:EffectCallback,
     n:number,
     deps?:DependencyList
 }
@@ -77,9 +78,9 @@ type {
 
 ```
 type {
-	effect:EffectCallback,
-	deps:DependencyList,
-	range:number[]
+    effect:EffectCallback,
+    deps:DependencyList,
+    range:number[]
 }
 ```
 
@@ -89,9 +90,9 @@ type {
 
 ```
 type {
-	effect:EffectCallback,
-	deps:DependencyList,
-	depsEqual:(oldDeps:DependencyList,nextDeps:DependencyList) => boolean
+    effect:EffectCallback,
+    deps:DependencyList,
+    depsEqual:(oldDeps:DependencyList,nextDeps:DependencyList) => boolean
 }
 ```
 
@@ -138,8 +139,8 @@ export default function demo() {
 
 ```
 type {
-	effect:EffectCallback,
-	deps:DependencyList,
+    effect:EffectCallback,
+    deps:DependencyList,
 }
 ```
 
@@ -148,8 +149,8 @@ type {
 #### useAsyncEffect
 ```
 type {
-	effect:EffectCallback,
-	deps?:DependencyList
+    effect:EffectCallback,
+    deps?:DependencyList
 }
 ```
 普通的useEffect的第一个参数是不能传入一个异步函数的，理由是 effect function 应该返回一个销毁函数（effect：是指return返回的cleanup函数），如果 useEffect 第一个参数传入 async，返回值则变成了 Promise，会导致 react 在调用销毁函数的时候报错 ：function.apply is undefined。
@@ -259,9 +260,9 @@ flush：立即执行fn，不用等到wait时间结束
 
 ```
 type {
-	effect:EffectCallback,
-	deps:DependencyList,
-	options:ThrottleOptions
+    effect:EffectCallback,
+    deps:DependencyList,
+    options:ThrottleOptions
 }
 ```
 
@@ -281,7 +282,7 @@ options参数：
 
 ```
 type {
-	effect:EffectCallback,
+    effect:EffectCallback,
 }
 ```
 
@@ -315,8 +316,8 @@ function App(){
 
 ```
 type {
-	effect:EffectCallback,
-	deps:DependencyList,
+    effect:EffectCallback,
+    deps:DependencyList,
 }
 ```
 
