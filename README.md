@@ -1,4 +1,4 @@
-## pluto-hooks <img src="https://img.shields.io/badge/pluto\-hooks/hooks工具库-66f.svg">
+## pluto-hooks <img src="https://img.shields.io/badge/plutoHooks/hooks工具库-66f.svg">
 
 **一个好用的react hook工具库**
 
