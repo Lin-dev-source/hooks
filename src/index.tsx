@@ -13,6 +13,7 @@ import Throttle from "./hooks/useThrottleEffect/demo/demo1"
 import CountUpdate from "./hooks/useCountUpdateEffect/demo/demo1"
 import RangeUpdate from "./hooks/useRangeUpdateEffect/demo/demo1"
 import First from "./hooks/useFirstMountState/demo/demo1"
+import Compare from "./hooks/useCompareEffect/demo/demo1"
 
 
 function App(): JSX.Element {
@@ -30,6 +31,7 @@ function App(): JSX.Element {
 					<Link to="/CountUpdate">CountUpdate</Link>
 					<Link to="/RangeUpdate">RangeUpdate</Link>
 					<Link to="/First">First</Link>
+					<Link to="/Compare">Compare</Link>
 				</div>
 				<Routes>
 					<Route path="/once" element={<UseEffectOnce />} />
@@ -41,6 +43,7 @@ function App(): JSX.Element {
 					<Route path="/CountUpdate" element={<CountUpdate />} />
 					<Route path="/RangeUpdate" element={<RangeUpdate />} />
 					<Route path="/First" element={<First />} />
+					<Route path="/Compare" element={<Compare />} />
 				</Routes>
 			</Router>
 		</div>

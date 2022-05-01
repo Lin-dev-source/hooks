@@ -8,6 +8,8 @@ import useThrottleFn from "./hooks/useThrottleFn"
 import useThrottleEffect from "./hooks/useThrottleEffect"
 import useUpdateEffect from "./hooks/useUpdateEffect"
 import useFirstMountState from "./hooks/useFirstMountState"
+import useCountUpdateEffect from "./hooks/useCountUpdateEffect"
+import useRangeUpdateEffect from "./hooks/useCountUpdateEffect"
 
 export {
   useAsyncEffect,
@@ -20,4 +22,6 @@ export {
   useThrottleEffect,
   useUpdateEffect,
   useFirstMountState,
+  useCountUpdateEffect,
+  useRangeUpdateEffect,
 }
