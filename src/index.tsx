@@ -5,13 +5,13 @@ import { BrowserRouter as Router, Route, Routes,Link } from "react-router-dom";
 import "./assets/css/reset.css";
 import "./index.scss";
 import UseEffectOnce from "./hooks/useEffectOnce/demo/demo1"
-import Async from "./hooks/useAsyncEffect/demo/demo1"
+import Async from "./hooks/useAsyncEffect/demo/demo2"
 import Update from "./hooks/useUpdateEffect/demo/demo1"
 import Deep from "./hooks/useDeepCompareEffect/demo/demo1"
 import Debounce from "./hooks/useDebounceEffect/demo/demo"
 import Throttle from "./hooks/useThrottleEffect/demo/demo1"
-import CountUpdate from "./hooks/useCountUpdateEffect/demo/demo1"
-import RangeUpdate from "./hooks/useRangeUpdateEffect/demo/demo1"
+import CountUpdate from "./hooks/useCountUpdateEffect/demo/demo2"
+import RangeUpdate from "./hooks/useRangeUpdateEffect/demo/demo2"
 import First from "./hooks/useFirstMountState/demo/demo1"
 import Compare from "./hooks/useCompareEffect/demo/demo1"
 
@@ -19,7 +19,6 @@ import Compare from "./hooks/useCompareEffect/demo/demo1"
 function App(): JSX.Element {
 	return (
 		<div>
-			
 			<Router>
 				<div className="tab">
 					<Link to="/once">once</Link>

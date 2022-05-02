@@ -12,7 +12,7 @@ export default () => {
 
 	useRangeUpdateEffect(() => {
 		setUpdateEffectCount((c) => c + 1);
-	},  [count],[5,20]);
+	}, [5, 20], [count]);
 
 	return (
 		<div>

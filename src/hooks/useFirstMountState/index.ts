@@ -4,7 +4,7 @@ import React,{useEffect,useRef} from 'react';
 
 export default function useFirstMountState(){
   const isFirst = useRef<boolean>(true)
-  console.log('isFirst: ', isFirst);
+  // console.log('isFirst: ', isFirst);
 
   if(isFirst.current){
     isFirst.current = false;

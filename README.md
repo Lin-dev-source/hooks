@@ -75,12 +75,13 @@ type {
 #### useRangeUpdateEffect
 
 在组件渲染次数为[range[0],range[1]]之间执行
+其中第二个参数传入一个数组range，range[0]为左边界，range[1]为右边界，若传入[,right]，则默认为[0,right]，如果传入[left,]，则大于left（包括left）的渲染次数都会触发effect
 
 ```
 type {
     effect:EffectCallback,
-    deps:DependencyList,
     range:number[]
+    deps?:DependencyList,
 }
 ```
 
