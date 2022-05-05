@@ -41,8 +41,8 @@ useEffectOnece(() => {
 ```ts
 type {
 	effect:EffectCallback,
-    n:number,
-    deps?:DependencyList
+  n:number,
+  deps?:DependencyList
 }
 ```
 
