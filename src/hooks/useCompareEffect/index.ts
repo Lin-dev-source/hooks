@@ -1,8 +1,8 @@
-import React,{useEffect,useRef} from 'react';
-import type { DependencyList, EffectCallback } from 'react';
+import React,{useEffect,useRef} from "react";
+import type { DependencyList, EffectCallback } from "react";
 
 
-export default function useCompareEffect(effect:EffectCallback,deps:DependencyList,depsEqual):void {
+export default function useCompareEffect(effect:EffectCallback,deps:DependencyList,depsEqual:(oldDeps:DependencyList,nextDeps:DependencyList) => boolean):void {
   const ref = useRef<DependencyList>(undefined)
 
   if(ref.current === undefined || !depsEqual(deps,ref.current)){

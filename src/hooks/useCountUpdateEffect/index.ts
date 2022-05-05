@@ -7,7 +7,7 @@ export default function useCountUpdateEffect(effect:EffectCallback,n:number,deps
 
   count.current=count.current+1;
   useEffect(() => {
-    console.log('useEffect',count.current);
+    // console.log('useEffect',count.current);
     if(count.current == n){
       return effect()
     }
