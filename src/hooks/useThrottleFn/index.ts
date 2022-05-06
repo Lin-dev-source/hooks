@@ -1,5 +1,5 @@
 import React,{useRef,useMemo} from "react";
-import throttle from "lodash/throttle";
+import {throttle} from "../../utils";
 import useUnmount from "../useUnmount"
 import {ThrottleOptions} from "../../types"
 

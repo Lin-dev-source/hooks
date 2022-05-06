@@ -1,5 +1,5 @@
 import React,{useRef,useMemo} from "react";
-import debounce from "lodash/debounce";
+import {debounce} from "../../utils";
 import useUnmount from "../useUnmount"
 import {DebounceOptions} from "../../types"
 
