@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes,Link } from "react-router-dom";
 import "./assets/css/reset.css";
 import "./index.scss";
 import UseEffectOnce from "./hooks/useEffectOnce/demo/demo1"
-import Async from "./hooks/useAsyncEffect/demo/demo2"
+import Async from "./hooks/useAsyncEffect/demo/demo1"
 import Update from "./hooks/useUpdateEffect/demo/demo1"
 import Deep from "./hooks/useDeepCompareEffect/demo/demo1"
 import Debounce from "./hooks/useDebounceEffect/demo/demo"
@@ -14,6 +14,7 @@ import CountUpdate from "./hooks/useCountUpdateEffect/demo/demo2"
 import RangeUpdate from "./hooks/useRangeUpdateEffect/demo/demo2"
 import First from "./hooks/useFirstMountState/demo/demo1"
 import Compare from "./hooks/useCompareEffect/demo/demo1"
+import URL from "./hooks/state/useUrlState/demo/demo1"
 
 
 function App(): JSX.Element {
@@ -31,6 +32,7 @@ function App(): JSX.Element {
 					<Link to="/RangeUpdate">RangeUpdate</Link>
 					<Link to="/First">First</Link>
 					<Link to="/Compare">Compare</Link>
+					<Link to="/URL">URL</Link>
 				</div>
 				<Routes>
 					<Route path="/once" element={<UseEffectOnce />} />
@@ -42,7 +44,7 @@ function App(): JSX.Element {
 					<Route path="/CountUpdate" element={<CountUpdate />} />
 					<Route path="/RangeUpdate" element={<RangeUpdate />} />
 					<Route path="/First" element={<First />} />
-					<Route path="/Compare" element={<Compare />} />
+					<Route path="/URL" element={<URL />} />
 				</Routes>
 			</Router>
 		</div>
