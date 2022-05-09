@@ -19,6 +19,12 @@ import Event from "./hooks/callBack/useEvent/demo/demo1"
 import Unmount from "./hooks/LifeCycle/useUnmountedRef/demo/demo1"
 import Boolean from "./hooks/state/useBoolean/demo/demo1"
 import Toggle from "./hooks/state/useToggle/demo/demo1"
+import LocalStorage from "./hooks/state/useLocalStorageState/demo/demo1"
+import SessionStorage from "./hooks/state/useSessionStorageState/demo/demo1"
+import Map from "./hooks/state/useMap/demo/demo1"
+import Previous from "./hooks/state/usePrevious/demo/demo1"
+import GetState from "./hooks/state/useGetState/demo/demo1"
+import Set from "./hooks/state/useSet/demo/demo1"
 
 function App(): JSX.Element {
 	return (
@@ -40,6 +46,12 @@ function App(): JSX.Element {
 					<Link to="/Unmount">Unmount</Link>
 					<Link to="/Boolean">Boolean</Link>
 					<Link to="/Toggle">Toggle</Link>
+					<Link to="/LocalStorage">LocalStorage</Link>
+					<Link to="/SessionStorage">SessionStorage</Link>
+					<Link to="/Map">Map</Link>
+					<Link to="/Previous">Previous</Link>
+					<Link to="/GetState">GetState</Link>
+					<Link to="/Set">Set</Link>
 				</div>
 				<Routes>
 					<Route path="/once" element={<UseEffectOnce />} />
@@ -57,6 +69,12 @@ function App(): JSX.Element {
 					<Route path="/Unmount" element={<Unmount />} />
 					<Route path="/Boolean" element={<Boolean />} />
 					<Route path="/Toggle" element={<Toggle />} />
+					<Route path="/LocalStorage" element={<LocalStorage />} />
+					<Route path="/SessionStorage" element={<SessionStorage />} />
+					<Route path="/Map" element={<Map />} />
+					<Route path="/Previous" element={<Previous />} />
+					<Route path="/GetState" element={<GetState />} />
+					<Route path="/Set" element={<Set />} />
 				</Routes>
 			</Router>
 		</div>
