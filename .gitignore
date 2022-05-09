@@ -2,4 +2,8 @@
 /node_modules
 
 # compiled output
+
 /dist 
+
+/README.md
+

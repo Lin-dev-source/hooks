@@ -22,19 +22,19 @@ export function parseUrlSearch(){
 
 export function stringfyParams(Params:paramsType){
   if(isEmptyObject(Params)) return;
-  console.log('Params: ', Params);
-  const res = Object.entries(Params).reduce((v,t) => (v.push(t[0] + "=" + t[1]),v),[])
-  return "?"+res.join("&");
+  // console.log('Params: ', Params);
+  // 如果newParams有的value为undefined，则清除这个key
+  const res = Object.entries(Params).reduce((v,t) => (t[1] !== undefined && t[1] !== null && v.push(t[0] + "=" + t[1]),v),[])
+  return res.length ? "?"+res.join("&") : "";
 }
 
-export function setUrlParams(Params:paramsType){
+export function setUrlParams(Params:paramsType,navigateMode:"push"|"replace"){
   // url = origin + pathname + params(srarch) + hash
   const {origin, pathname,hash} =  location
   const url = origin+pathname
   const oldParams = parseUrlSearch()
-  console.log('oldParams: ', oldParams);
   const newParams = Object.assign({},oldParams,Params)
-  console.log('newParams: ', newParams);
   // history API https://developer.mozilla.org/zh-CN/docs/Web/API/History_API
-  history.pushState({},document.title,url + stringfyParams(newParams) + hash)
+  const query = [{},document.title,url + stringfyParams(newParams) + hash]
+  navigateMode ? navigateMode === "push" ? history.pushState(...query): history.replaceState(...query) :history.pushState(...query)
 }
