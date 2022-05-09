@@ -1,9 +1,16 @@
 import React,{useState,useRef} from 'react';
 
+interface Actions<T> {
+  setLeft: () => void;
+  setRight: () => void;
+  set: (value: T) => void;
+  toggle: () => void;
+}
+
 export default function useToggle(defaultValue,reverseValue){
 	const left = useRef(defaultValue)
 	const right = useRef(reverseValue)
-	const [state,setState] = useState(left.current ?? true);
+	const [state,setState] = useState(left.current ?? true); // 默认是true和false
 	right.current = right.current || false
 	const toggle = () => {
 		setState(state === left.current ? right.current : left.current);
