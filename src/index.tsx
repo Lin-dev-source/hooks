@@ -15,6 +15,10 @@ import RangeUpdate from "./hooks/useRangeUpdateEffect/demo/demo2"
 import First from "./hooks/useFirstMountState/demo/demo1"
 import SetState from "./hooks/useSetState/demo/demo1"
 import Compare from "./hooks/useCompareEffect/demo/demo1"
+import Event from "./hooks/callBack/useEvent/demo/demo1"
+import Unmount from "./hooks/LifeCycle/useUnmountedRef/demo/demo1"
+import Boolean from "./hooks/state/useBoolean/demo/demo1"
+import Toggle from "./hooks/state/useToggle/demo/demo1"
 
 function App(): JSX.Element {
 	return (
@@ -32,6 +36,10 @@ function App(): JSX.Element {
 					<Link to="/First">First</Link>
 					<Link to="/SetState">SetState</Link>
 					<Link to="/Compare">Compare</Link>
+					<Link to="/Event">Event</Link>
+					<Link to="/Unmount">Unmount</Link>
+					<Link to="/Boolean">Boolean</Link>
+					<Link to="/Toggle">Toggle</Link>
 				</div>
 				<Routes>
 					<Route path="/once" element={<UseEffectOnce />} />
@@ -45,6 +53,10 @@ function App(): JSX.Element {
 					<Route path="/First" element={<First />} />
 					<Route path="/SetState" element={<SetState />} />
 					<Route path="/Compare" element={<Compare />} />
+					<Route path="/Event" element={<Event />} />
+					<Route path="/Unmount" element={<Unmount />} />
+					<Route path="/Boolean" element={<Boolean />} />
+					<Route path="/Toggle" element={<Toggle />} />
 				</Routes>
 			</Router>
 		</div>

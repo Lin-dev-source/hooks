@@ -1,0 +1,29 @@
+import React from "react";
+import useToggle from "../index";
+
+export default function demo() {
+	const [state, { toggle, set, setLeft, setRight }] = useToggle("Hello", "World");
+
+	return (
+		<div>
+			<p>Effects：{state}</p>
+			<p>
+				<button type="button" onClick={toggle}>
+					Toggle
+				</button>
+				<button type="button" onClick={() => set("123")} style={{ margin: "0 8px" }}>
+					Set 123
+				</button>
+				<button type="button" onClick={() => set("234")}>
+					Set 234
+				</button>
+				<button type="button" onClick={setLeft} style={{ margin: "0 8px" }}>
+					Set Left
+				</button>
+				<button type="button" onClick={setRight}>
+					Set Right
+				</button>
+			</p>
+		</div>
+	);
+}
