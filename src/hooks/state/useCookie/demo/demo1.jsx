@@ -1,17 +1,19 @@
 import React from "react";
-import { setCookie, getAllcookie } from "../../../../utils/cookie";
+import { setCookie } from "../../../../utils/cookie";
+import useCookie from "../index";
 
+import useCookies from "../../useCookies";
 // domain和path与当前路径相同才可以set
 export default function demo() {
-	setCookie("b", "123", {
-		day: 1,
-		// domain: "192.168.1.105",
-		// path: "/Cookie",
-		secure: true
-		// sameSite: "strict"
-	});
-	// setCookie("a", undefined);
-	console.log(getAllcookie());
-
-	return <div>123</div>;
+	const { getAllCookie } = useCookies();
+	console.log(getAllCookie());
+	const [message, setMessage] = useCookie("useCookieStateString");
+	return (
+		<input
+			value={message}
+			placeholder="Please enter some words..."
+			onChange={(e) => setMessage(e.target.value)}
+			style={{ width: 300 }}
+		/>
+	);
 }

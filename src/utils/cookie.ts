@@ -1,7 +1,7 @@
 interface cookieType {
   [key: string]: string
 }
-interface cookieOPtionsType {
+export interface cookieOPtionsType {
   domain?: string,
   path?: string,
   day?: number, // 表示过期天数，-1表示立即过期
@@ -21,7 +21,7 @@ export function getCookie(key:string){// 后面有个空格
   return keyValue.split("=")[1]
 }
 
-export function getAllcookie(){
+export function getAllCookie(){
   return document.cookie.split("; ").reduce((v,t)=>{
     const [key,value] = t.split("=")
     v[key] = value

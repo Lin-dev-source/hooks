@@ -1,7 +1,7 @@
 import React from "react";
-import { useToggle } from "ahooks";
+import useToggle from "../index";
 
-export default () => {
+export default function demo() {
 	const [state, { toggle, set, setLeft, setRight }] = useToggle("Hello", "World");
 
 	return (
@@ -26,4 +26,4 @@ export default () => {
 			</p>
 		</div>
 	);
-};
+}
