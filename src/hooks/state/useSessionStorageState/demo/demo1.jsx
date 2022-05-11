@@ -16,10 +16,10 @@ export default function demo() {
 				onChange={(e) => setMessage(e.target.value)}
 			/>
 			<button style={{ margin: "0 8px" }} type="button" onClick={() => setMessage("Hello~")}>
-        Reset
+				Reset
 			</button>
 			<button type="button" onClick={() => setMessage()}>
-        Clear
+				Clear
 			</button>
 		</>
 	);

@@ -9,10 +9,10 @@ export default function demo() {
 			<div>counter current value: {count}</div>
 			<div style={{ marginBottom: 8 }}>counter previous value: {previous}</div>
 			<button type="button" onClick={() => setCount((c) => c + 1)}>
-        increase
+				increase
 			</button>
 			<button type="button" style={{ marginLeft: 8 }} onClick={() => setCount((c) => c - 1)}>
-        decrease
+				decrease
 			</button>
 		</>
 	);

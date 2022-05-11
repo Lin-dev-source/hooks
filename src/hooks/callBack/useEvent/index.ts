@@ -1,10 +1,10 @@
-import React,{useCallback,useRef} from "react";
-import useUpdateEffect from "../../useUpdateEffect";
+import { useCallback, useRef } from "react";
+import useUpdateEffect from "../../effect/useUpdateEffect";
 
 
 // 当useCallback没有依赖或依赖没变化时，希望获得最新的props或state
-export default function useEvent(fn,deps){
-	const fnRef = useRef(fn); 
+export default function useEvent(fn, deps) {
+	const fnRef = useRef(fn);
 	// console.log('fnRef: ', fnRef);
 
 	/* 
@@ -12,13 +12,13 @@ export default function useEvent(fn,deps){
 	if(fnRef){
 		fnRef.current = fn
 	} */
-	useUpdateEffect(()=>{
+	useUpdateEffect(() => {
 		fnRef.current = fn
 	})
 
 
-	return useCallback((...args)=>{
+	return useCallback((...args) => {
 		const curFn = fnRef.current
 		curFn(...args);
-	},deps)
+	}, deps)
 }

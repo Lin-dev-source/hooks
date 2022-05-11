@@ -1,7 +1,11 @@
 {
   "name": "pluto-hooks",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "description": "一个好用的react hook工具库",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/plutoLam/pluto-hooks"
+  },
   "keywords": [
     "react",
     "hook",
@@ -10,7 +14,10 @@
     "前端",
     "工具",
     "useState",
-    "react hooks"
+    "react hooks",
+    "useState",
+    "useEvent",
+    "useCallback"
   ],
   "author": "",
   "license": "MIT",

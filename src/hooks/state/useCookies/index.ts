@@ -1,6 +1,6 @@
 import { getCookie, setCookie, removeCooikeItem, getAllCookie } from "../../../utils/cookie"
 
-export default function useCookies(){
+export default function useCookies() {
   return {
     getCookie, setCookie, removeCooikeItem, getAllCookie
   }

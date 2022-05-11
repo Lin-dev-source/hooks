@@ -21,7 +21,7 @@ export function getCookie(key:string){// 后面有个空格
   return keyValue.split("=")[1]
 }
 
-export function getAllCookie(){
+export function getAllCookie():cookieType{
   return document.cookie.split("; ").reduce((v,t)=>{
     const [key,value] = t.split("=")
     v[key] = value

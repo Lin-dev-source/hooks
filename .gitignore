@@ -5,5 +5,9 @@
 
 /dist 
 
-/README.md
+/yarn.lock
+
+/yarn-error.log
+
+/.vscode
 

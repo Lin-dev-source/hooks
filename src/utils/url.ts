@@ -28,6 +28,8 @@ export function stringfyParams(Params:paramsType){
   return res.length ? "?"+res.join("&") : "";
 }
 
+type historyState = [Object,string,string]
+
 export function setUrlParams(Params:paramsType,navigateMode:"push"|"replace"){
   // url = origin + pathname + params(srarch) + hash
   const {origin, pathname,hash} =  location
@@ -35,6 +37,6 @@ export function setUrlParams(Params:paramsType,navigateMode:"push"|"replace"){
   const oldParams = parseUrlSearch()
   const newParams = Object.assign({},oldParams,Params)
   // history API https://developer.mozilla.org/zh-CN/docs/Web/API/History_API
-  const query = [{},document.title,url + stringfyParams(newParams) + hash]
+  const query:historyState = [{},document.title,url + stringfyParams(newParams) + hash] 
   navigateMode ? navigateMode === "push" ? history.pushState(...query): history.replaceState(...query) :history.pushState(...query)
 }

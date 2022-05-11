@@ -1,22 +1,22 @@
-import React,{useState} from 'react';
+import { useState } from 'react';
 
-interface Action{
-	toggle:() => void;
-	setTrue:() => void;
-	setFalse:() => void;
+interface Action {
+	toggle: () => void;
+	setTrue: () => void;
+	setFalse: () => void;
 }
 
-export default function useBoolean(initState?:boolean):[boolean, Action] {
-	const [state,setState] = useState<boolean>(initState || true);  // 默认是true
+export default function useBoolean(initState?: boolean): [boolean, Action] {
+	const [state, setState] = useState<boolean>(initState || true);  // 默认是true
 
-	const toggle = ()=> {
+	const toggle = () => {
 		setState(state => !state)
 	}
-	const setTrue = ()=> {
+	const setTrue = () => {
 		setState(true)
 	}
-	const setFalse = ()=> {
+	const setFalse = () => {
 		setState(false)
 	}
-	return [state,{toggle,setTrue,setFalse}]
+	return [state, { toggle, setTrue, setFalse }]
 }

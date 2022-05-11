@@ -1,4 +1,3 @@
-import { useEffect,useState } from "react";
 import useStorageState from "../../../utils/storage"
 
 interface Options<T> {
@@ -7,6 +6,6 @@ interface Options<T> {
   deserializer?: (value: string) => T;
 }
 
-export default function useLocalStorageState<T>(key:string,options:Options<T>){
-	return useStorageState("local",key,options)
+export default function useLocalStorageState<T>(key: string, options: Options<T>) {
+  return useStorageState("local", key, options)
 }
