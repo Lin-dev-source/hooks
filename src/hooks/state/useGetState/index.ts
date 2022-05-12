@@ -1,17 +1,17 @@
-import { useState, useRef, useEffect } from "react"
-import type { Dispatch, SetStateAction } from 'react';
+import { useState, useRef, useEffect } from "react";
+import type { Dispatch, SetStateAction } from "react";
 
-type GetStateAction<S> = () => S
+type GetStateAction<S> = () => S;
 
 export default function useGetState<S>(initValue: S | (() => S)): [S, Dispatch<SetStateAction<S>>, GetStateAction<S>] {
-	const [state, setState] = useState(initValue)
-	const ref = useRef<S>()
+	const [state, setState] = useState(initValue);
+	const ref = useRef<S>();
 
 	useEffect(() => {
-		ref.current = state
-	}, [state])
+		ref.current = state;
+	}, [state]);
 
-	const getState = () => ref.current  // ?? 源码加了useCallback
+	const getState = (): S => ref.current; // ?? 源码加了useCallback
 
-	return [state, setState, getState]
+	return [state, setState, getState];
 }
