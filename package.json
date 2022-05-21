@@ -1,6 +1,6 @@
 {
   "name": "pluto-hooks",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "一个好用的react hook工具库",
   "repository": {
     "type": "git",
@@ -35,9 +35,10 @@
     "@babel/runtime-corejs3": "7.17.9",
     "@yangzw/bruce-us": "^1.0.1",
     "lodash": "^4.17.21",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
     "react-router-dom": "^6.3.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^22.0.0",
@@ -49,6 +50,8 @@
     "@types/react-dom": "18.0.2",
     "@types/react-router-dom": "5.3.3",
     "@types/webpack-env": "1.16.4",
+    "pluto-hooks": "^1.0.1",
+    "react-dom": "^18.1.0",
     "rollup": "^2.70.2",
     "rollup-plugin-cleandir": "^2.0.0",
     "rollup-plugin-dts": "^4.2.1",
